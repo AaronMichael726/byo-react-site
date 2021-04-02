@@ -1,73 +1,43 @@
-# ![GA logo](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) README: a How-To Guide
-
-### Overview
-
-To get your project idea approved for the Unit 1 project, you will begin developing your project's README file. The approval process will follow the steps below:
-
-* Learn about README files and markdown
-* Fork and clone this README for your project
-* In your copy, fill out the following fields:
-  * Title & Blurb
-  * Motivation
-  * User Stories & Wireframes
-* Submit a pull request for project approval
-* Get your project approved
-* Copy this template to your project repository
-* Complete your README as your project develops
-
-
-### What is a README?
-
-A README is a file that describes a project, program or app. It often includes information on technologies used, how to install or use the app, and code examples.
-
-On GitHub, a README in your repo acts like an `index.html` file. If there is a README in a directory of a repo, the README will display as an HTML page.
-
----
-### Markdown
-
-Markdown is a plain text format for writing *structured* documents. It uses non-alphabetic characters to indicate simple styling choices. The simple syntax makes it easy to read in its raw format and converts easily to a formatted HTML document.
-
-### GFM (GitHub Flavored Markdown)
-
-GitHub Flavored Markdown, aka GFM, is a dialect of Markdown. It uses  the same syntax as Markdown with some additional features, e.g., direct embedding of HTML.
-
-#### Basic Syntax
-```markdown
-h1 - h6 head tags
-# = h1, ## = h2, etc.
-
-**text** = bold
-*text* = italic
-
-[link text](absolute or relative url)
-
-![image path](absolute or relative url)
-
-```
-
-#### Markdown Resources
-
-* [GFM basic syntax](https://docs.github.com/en/free-pro-team@latest/github/writing-on-github/basic-writing-and-formatting-syntax)
-* [Mastering Markdown on GitHub](https://guides.github.com/features/mastering-markdown/)
-* [GitHub Flavored Markdown Spec](https://github.github.com/gfm/)
-
----
-## Project READMEs at ![GA logo](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)
-
-Example:
-
-# Project Title
-A blurb about your project; what is it?
+# Personal Website Template
+We react website template. This template will be used to sell personalize d websites to artists, attorneys, web developers, travel bloggers, and more.
 
 ### Motivation
-A short description about why you built this app.
+This application is built with the intended purpose to use as a sales too to build out personal websites that can be tailored to meet an individuals brand.
+
+### Customer
+##### Customer 1: My Customer the Artist
+The artist/customer is one who is looking to get a personal website to reflect their brand.  Each template should be designed with my customer's customer in mind. 
+
+##### Customer 2: Customer's Customer
+The customer's customer is the person who will be viewing the final product.  Each template should have our customer's customer in mind as we think through functionality and design.
 
 ---
 ### Screenshots
 screen captures of your app
 
 ---
-### User Stories & Wireframes
+### User Stories
+MVP Two Templates: 
+- Artist:
+    * Artists template should be artist/art focused.  The center should be the artists headshot or artwork. 
+    * Customer 2 should be able to contact the artist directly for commissions or to be hired.
+    * Artist should have a spot for a brief bio
+    * Artist should ahve a spot for spot to showcase artwork and product offerings.
+        - if the artist has a product the site should include pricing and opportunities for customer 2 to purchase the product
+    * Stretch: 
+        - Artist should have some drag and drop capability.  If possible artist should log in and be able to update a headshot or bio
+        - Artist should be able to update products.
+- Professional:
+    * Think: Attorney, Therapists, Web Developers, Graphic Designers, Freelancers
+    * Professional should showcase their practice or the work that they do.  Front page should be clear what service do you provide.
+    * Professional should have a contact page. 
+    * Professional have an aboutMe page. 
+        - about me should be most descript as it includes professionals "CV" clearly
+    * Artist should have a space to showcase services offerred included pricing structures and ways to contact.
+    * Stretch: 
+        - Drag and drop and edit capabilities.
+
+### Wireframes
 The planning materials used to build this app.
 * High-level user stories.
 * image files of wireframes
