@@ -1,7 +1,7 @@
 from rest_framework import routers
-from .api import ArtistViewSet
+from .api import TourViewSet
 
 router = routers.DefaultRouter()
-router.register('api/artist', ArtistViewSet, 'artist')
+router.register('api/tour', TourViewSet, 'tour')
 
 urlpatterns = router.urls

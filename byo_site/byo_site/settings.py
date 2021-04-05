@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'artist',
     'professional',
+    'tour',
     'knox',
     'rest_framework'
 ]

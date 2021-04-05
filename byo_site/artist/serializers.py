@@ -1,9 +1,10 @@
 from rest_framework import serializers
-from artist.models import Artist, Tour
+from artist.models import Artist
+from tour.serializers import TourSerializer
 
-## Create Serializers for Artists
 class ArtistSerializer(serializers.ModelSerializer):
 
+    # tour_dates = TourSerializer(many=True)
     class Meta:
         model = Artist
-        fields = '__all__'
+        fields = ['id', 'first_name', 'last_name', 'phone', 'email']

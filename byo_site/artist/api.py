@@ -10,4 +10,3 @@ class ArtistViewSet(viewsets.ModelViewSet):
     ]
     serializer_class = ArtistSerializer
 
-    
