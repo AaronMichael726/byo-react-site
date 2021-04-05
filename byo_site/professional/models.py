@@ -5,6 +5,7 @@ from phone_field import PhoneField
 class Professional(models.Model):
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
+    brief_description = models.CharField(max_length=250)
     company_name = models.CharField(max_length=100)
     phone = PhoneField(blank=True, help_text='Contact phone number')
     email = models.EmailField(max_length=100, unique=True)

@@ -5,4 +5,4 @@ class ProfessionalSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Professional
-        fields = ['id', 'company_name', 'first_name', 'last_name', 'phone', 'email']
+        fields = ['id', 'first_name', 'last_name', 'company_name', 'brief_description', 'phone', 'email']
