@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'artist',
     'professional',
     'tour',
+    'services',
     'knox',
     'rest_framework'
 ]
