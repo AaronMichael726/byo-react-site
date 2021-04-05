@@ -1,0 +1,6 @@
+# Main page with headshot background
+# Description of the artist
+# NavBar connecting to About | Tour Dates | Contact
+# NavBar at bottom 
+
+# Head shot should be background of entire site - do first
