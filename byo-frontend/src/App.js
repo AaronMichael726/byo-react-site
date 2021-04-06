@@ -1,66 +1,31 @@
 import './App.css';
-import sample from './images/rando-comedian.jpeg'
-import { Menu, Container } from 'semantic-ui-react'
-import Home from './components/home'
-import TourForm from './components/forms/tourDates'
-import ContactForm from './components/forms/contact'
-import HomeForm from './components/forms/home' 
+import { Button } from 'semantic-ui-react'
+import ArtistMain from './components/artistMain'
+
 
 import { useState } from 'react'
 
-function App() {
-
-    let bodyText = <Home />
-    const [activeItem, setActiveItem] = useState("home")  
-    const [form, setForm] = useState(false)  
-
-
-    const handleItemClick = (e, { name }) => {
-        setActiveItem(name)
-    }
+function App() {  
+    const [form, setForm] = useState(true)  
+    const [button, setButton] = useState("Click to See Professional Site Template")
 
     const changeForm = () => {
         form ? setForm(false) : setForm(true)
-    }
+        form ? setButton("Click to See Professional Site Template")
+            : setButton("Click to See Artist Site Template") 
 
-    if (activeItem === "home"){
-        bodyText = <HomeForm />
-    } else if (activeItem === "tour dates"){
-        bodyText = <TourForm />
-    } else if (activeItem === "contact"){
-        bodyText = <ContactForm />
     }
-
 
     return (
-        <Container center
-            style={{
-                backgroundImage: `url(${sample})`,
-                height: '100vh',
-                width: '100%',
-                backgroundRepeat: 'no-repeat',
-            }}>
-
-            <Menu secondary>
-                <Menu.Item
-                    name='home'
-                    active={activeItem === 'home'}
-                    onClick={handleItemClick}
-                />
-                <Menu.Item
-                    name='tour dates'
-                    active={activeItem === 'tour dates'}
-                    onClick={handleItemClick}
-                />
-                <Menu.Item
-                    name='contact'
-                    active={activeItem === 'contact'}
-                    onClick={handleItemClick}
-                />
-            </Menu>
-
-            {bodyText}
-        </Container>
+        form ?
+        <>
+            <Button fluid onClick={changeForm}> {button} </Button>
+            <ArtistMain />
+        </>
+        :
+        <>
+            <h1>Professional Site Template</h1>
+        </>
 
     )
 }
