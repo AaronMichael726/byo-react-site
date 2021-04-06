@@ -4,7 +4,8 @@ import datetime
 
 # Create your models here.
 class Tour(models.Model):
-    title = models.CharField(max_length=100)
+    city = models.CharField(max_length=100)
+    state = models.CharField(max_length=100)
     date = models.DateField(default=datetime.date.today)
     venue = models.CharField(max_length=100)
     description = models.CharField(max_length=500)
