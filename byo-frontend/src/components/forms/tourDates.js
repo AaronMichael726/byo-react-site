@@ -27,28 +27,18 @@ function TourForm() {
     const hDescription = (e) => setDescription(e.target.value)
 
     const hSubmit = () => {
-        console.log(tourDates)
+
+        setTourDates([
+            ...tourDates,
+            {
+                city: city,
+                state: state,
+                date: date,
+                venue: venue,
+                description: description
+            }
+        ])
         
-        if (tourDates.city === "Sample") {
-            setTourDates([{
-                city,
-                state,
-                date,
-                venue,
-                description
-            }])
-        } else {
-            setTourDates([
-                ...tourDates,
-                {
-                    city,
-                    state,
-                    date,
-                    venue,
-                    description
-                }
-            ])
-        }
 
         console.log(tourDates)
 
@@ -56,19 +46,38 @@ function TourForm() {
         display ? setButtonText("See your website!") : setButtonText("Personalize!")
     }
 
+    const hSubmitTwo = () => {
+
+            setTourDates([
+                ...tourDates,
+                {
+                    city: city,
+                    state: state,
+                    date: date,
+                    venue: venue,
+                    description: description 
+                }
+            ])
+
+        document.getElementById('reset-form').reset()
+    }
+
     return (
-        // <h1>{tourDates[0].city}</h1>
         display ?
             <>
-                { tourDates.map((idx) => {
+                
+                { tourDates.map(({city, state, date, venue, description}) => 
+                    
+                
                     <TourDates
-                        city={idx.city}
-                        state={idx.state}
-                        date={idx.date}
-                        venue={idx.venue}
-                        description={idx.description}
+                        city={city}
+                        state={state}
+                        date={date}
+                        venue={venue}
+                        description={description}
                     />
-                }) }
+                )
+                }
 
                 < footer >
                     <Button type='submit' fluid onClick={hSubmit} style={{
@@ -81,11 +90,9 @@ function TourForm() {
             </>
         :
         <>
-            <Form style={{
-                width: '50%'
-            }}>
+            <Form id="reset-form">
                 <Form.Group>
-                    <Form.Input placeholder="City" width={6} onChamge={hCity} />
+                    <Form.Input placeholder="City" width={6} onChange={hCity} />
                     <Form.Input placeholder="State" width={2} onChange={hState} />
                 </Form.Group>
                 <Form.Group>
@@ -101,6 +108,9 @@ function TourForm() {
                 <Button type='submit' fluid onClick={hSubmit} style={{
                     width: '50%'
                 }}>{buttonText}</Button>
+                <Button type='submit' fluid onClick={hSubmitTwo} style={{
+                    width: '50%'
+                }}>Add Another Tour Date</Button>
             </footer>
         </>
     )
