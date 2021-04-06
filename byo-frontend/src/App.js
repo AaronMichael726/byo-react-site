@@ -4,25 +4,33 @@ import { Header, Menu, Container } from 'semantic-ui-react'
 import Home from './components/home'
 import TourDates from './components/tourDates'
 import Contact from './components/contact'
+import HomeForm from './components/forms/home' 
 
 import { useState } from 'react'
 
 function App() {
 
     let bodyText = <Home />
-    const [activeItem, setActiveItem] = useState("home")    
+    const [activeItem, setActiveItem] = useState("home")  
+    const [form, setForm] = useState(false)  
+
 
     const handleItemClick = (e, { name }) => {
         setActiveItem(name)
     }
 
+    const changeForm = () => {
+        form ? setForm(false) : setForm(true)
+    }
+
     if (activeItem === "home"){
-        bodyText = <Home />
+        bodyText = <HomeForm />
     } else if (activeItem === "tour dates"){
         bodyText = <TourDates />
     } else if (activeItem === "contact"){
         bodyText = <Contact />
     }
+
 
     return (
         <Container center
@@ -33,8 +41,6 @@ function App() {
                 backgroundRepeat: 'no-repeat',
             }}>
 
-            <button class="ui fluid button">Personalize This Site!</button>
-            
             <Menu secondary>
                 <Menu.Item
                     name='home'
@@ -53,7 +59,7 @@ function App() {
                 />
             </Menu>
 
-        {bodyText}
+            {bodyText}
         </Container>
 
     )
