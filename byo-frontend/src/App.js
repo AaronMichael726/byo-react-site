@@ -1,8 +1,8 @@
 import './App.css';
 import sample from './images/rando-comedian.jpeg'
-import { Header, Menu, Container } from 'semantic-ui-react'
+import { Menu, Container } from 'semantic-ui-react'
 import Home from './components/home'
-import TourDates from './components/tourDates'
+import TourForm from './components/forms/tourDates'
 import ContactForm from './components/forms/contact'
 import HomeForm from './components/forms/home' 
 
@@ -26,7 +26,7 @@ function App() {
     if (activeItem === "home"){
         bodyText = <HomeForm />
     } else if (activeItem === "tour dates"){
-        bodyText = <TourDates />
+        bodyText = <TourForm />
     } else if (activeItem === "contact"){
         bodyText = <ContactForm />
     }
