@@ -1,5 +1,5 @@
 import '../App.css';
-import sample from '../images/rando-comedian.jpeg'
+import sample from '../images/kitten.jpeg'
 import { Menu, Container, Button } from 'semantic-ui-react'
 import HomeForm from './forms/home'
 import TourForm from './forms/tourDates'
@@ -36,7 +36,9 @@ function ArtistMain() {
                 backgroundRepeat: 'no-repeat',
             }}>
 
-            <Menu secondary>
+            <Menu secondary style={{
+                fontSize: '18px'
+            }}>
                 <Menu.Item
                     name='home'
                     active={activeItem === 'home'}

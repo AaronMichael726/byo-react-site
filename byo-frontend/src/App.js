@@ -1,6 +1,7 @@
 import './App.css';
 import { Button } from 'semantic-ui-react'
 import ArtistMain from './components/artistMain'
+import ProfessionalMain from './components/professionalMain'
 
 
 import { useState } from 'react'
@@ -24,7 +25,8 @@ function App() {
         </>
         :
         <>
-            <h1>Professional Site Template</h1>
+            <Button fluid onClick={changeForm}> {button} </Button>
+            <ProfessionalMain />
         </>
 
     )
