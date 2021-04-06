@@ -5,13 +5,13 @@ import { Menu, Container, Button } from 'semantic-ui-react'
 // import TourForm from './forms/tourDates'
 // import ContactForm from './forms/contact'
 // import Home from './home'
-import Home from './professional/display/home'
+import HomeForm from './professional/forms/home'
 
 import { useState } from 'react'
 
 function ProfessionalMain() {
 
-    let bodyText = <Home />
+    let bodyText = <HomeForm />
     const [activeItem, setActiveItem] = useState("home")  
 
     // const handleItemClick = (e, { name }) => {
