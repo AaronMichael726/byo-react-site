@@ -3,7 +3,7 @@ import sample from './images/rando-comedian.jpeg'
 import { Header, Menu, Container } from 'semantic-ui-react'
 import Home from './components/home'
 import TourDates from './components/tourDates'
-import Contact from './components/contact'
+import ContactForm from './components/forms/contact'
 import HomeForm from './components/forms/home' 
 
 import { useState } from 'react'
@@ -28,7 +28,7 @@ function App() {
     } else if (activeItem === "tour dates"){
         bodyText = <TourDates />
     } else if (activeItem === "contact"){
-        bodyText = <Contact />
+        bodyText = <ContactForm />
     }
 
 

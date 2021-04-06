@@ -4,7 +4,7 @@ import { Image, Grid, Header } from 'semantic-ui-react'
 import phoneIcon from '../images/phone3.png'
 import emailIcon from '../images/emailIcon.png'
 
-const GridExampleColumnWidth = () => (
+const Contact = ({ areaCode, second, last, email}) => (
 
     <>
         <Grid>
@@ -14,7 +14,7 @@ const GridExampleColumnWidth = () => (
             <Grid.Column width={4} style={{
                 margin: '35px 0px 0px'
             }}>
-                <Header size='huge'>(XXX) XXX-XXXX</Header>
+                <Header size='huge'>({areaCode}) {second}-{last}</Header>
             </Grid.Column>
         </Grid>
 
@@ -25,10 +25,10 @@ const GridExampleColumnWidth = () => (
             <Grid.Column width={4} style={{
                 margin: '35px 0px 0px'
             }}>
-                <Header size='huge'>SampleComedian@Comics.com</Header>
+                <Header size='huge'>{email}</Header>
             </Grid.Column>
         </Grid>
     </>
 )
 
-export default GridExampleColumnWidth
+export default Contact
